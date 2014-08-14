@@ -10,7 +10,7 @@ weatherApp.factory('ForecastService', ['$http', function($http){
             url: apiUrl,
             params: params
         });
-    }
+    };
 
     var convertUnit = function (list, unit) {
         for (var i = 0; i < list.length; i++) {
@@ -22,12 +22,12 @@ weatherApp.factory('ForecastService', ['$http', function($http){
                 }
             }
         }
-        return list
-    }
+        return list;
+    };
 
     return {
         get: getForecast,
         convertUnit: convertUnit
-    }
+    };
     
-}])
+}]);

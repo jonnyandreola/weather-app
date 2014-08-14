@@ -13,11 +13,11 @@ weatherApp.controller('ResultCtrl', ['$scope', '$routeParams','$location', 'Fore
 
     $scope.switchUnit = function(){
         ForecastService.convertUnit($scope.forecast.list, $scope.units);
-    }
+    };
 
     $scope.search = function(city) {
         $location.search({q: city, units: $scope.units});
-    }
+    };
 
 
 }]);
