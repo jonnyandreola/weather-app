@@ -2,7 +2,7 @@
 
 weatherApp.controller('MainCtrl', ['$scope', '$location', function ($scope, $location) {
 
-    $scope.type = 'metric';
+    $scope.units = 'metric';
 
     $scope.search = function(city, type) {
         if(!city) {
@@ -10,7 +10,7 @@ weatherApp.controller('MainCtrl', ['$scope', '$location', function ($scope, $loc
             return false;
         }
 
-        $location.path('/result').search({q: $scope.city, units: $scope.type})
+        $location.path('/result').search({q: $scope.city, units: $scope.units})
     }
 
 }]);

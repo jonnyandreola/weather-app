@@ -9,12 +9,12 @@
                 </span>
             </div>
             <hr>
-            <div class="btn-group" data-toggle="buttons">
-                <label class="btn btn-primary" ng-class="type == 'metric'? 'active': ''">
-                    <input type="radio" name="options" ng-model="type" value="metric" id="option1" checked> Celsius
+            <div class="btn-group pull-right" data-toggle="buttons">
+                <label class="btn btn-primary" ng-class="units == 'metric'? 'active': ''">
+                    <input type="radio" name="options" ng-model="units" value="metric" id="option1" checked> Celsius
                 </label>
-                <label class="btn btn-primary"  ng-class="type == 'imperial'? 'active': ''">
-                    <input type="radio" name="options" ng-model="type" value="imperial" id="option2"> Fahrenheit
+                <label class="btn btn-primary"  ng-class="units == 'imperial'? 'active': ''">
+                    <input type="radio" name="options" ng-model="units" value="imperial" id="option2"> Fahrenheit
                 </label>
             </div>
         </div>
