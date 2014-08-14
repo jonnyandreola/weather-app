@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="row">
+        <h2>Week forecast for: {{ forecast.city.name }}, {{ forecast.city.country }}</h2>
+        <div ng-repeat="c in forecast.list" class="col-md-3 well">
+            <h4 class="text-center">{{ c.dt * 1000 | date: 'EEEE, MMM d'}}</h4>
+            <p class="text-center"><img ng-src="http://openweathermap.org/img/w/{{c.weather[0].icon}}.png"/><br/>
+                {{ c.weather[0].description }}</p>
+            <h2 class="text-center">
+                <i class="wi-thermometer-exterior"></i><i class="wi-down"></i> {{c.temp.min|number:0}}
+                <i ng-class="$parent.forecast.units == 'metric' ? 'wi-celcius' : 'wi-fahrenheit'"></i> | 
+               <i class="wi-thermometer"></i><i class="wi-up"></i> {{c.temp.max|number:0}}
+               <i ng-class="$parent.forecast.units == 'metric' ? 'wi-celcius' : 'wi-fahrenheit'"></i></h2> 
+        </div>
+    </div>
+</div>

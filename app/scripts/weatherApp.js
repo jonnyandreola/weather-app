@@ -1,14 +1,17 @@
 'use strict';
 
-angular.module('weatherApp', ['ngAnimate', 'ngSanitize', 'ngResource', 'ngRoute'])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'partials/main.html',
-        controller: 'MainCtrl'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
-  })
-;
+var weatherApp = angular.module('weatherApp', ['ngSanitize', 'ngRoute'])
+    .config(function ($routeProvider) {
+        $routeProvider
+            .when('/', {
+                templateUrl: 'partials/main.html',
+                controller: 'MainCtrl'
+            })
+            .when('/result', {
+                templateUrl: 'partials/result.html',
+                controller: 'ResultCtrl'
+            })
+            .otherwise({
+                redirectTo: '/'
+            });
+    });
